@@ -98,7 +98,7 @@ if __name__ == '__main__':
 
     plt.xlim(140,983)
     plt.ylim(0,2.5)
-    plt.savefig('plot__bnsl__extrapolate__4_digit_addition__dataset_size_x-axis.png', bbox_inches='tight')
+    plt.savefig('plot__bnsl__fit_and_extrapolate__4_digit_addition__dataset_size_x-axis.png', bbox_inches='tight')
     plt.show()
 
     plt.close()
