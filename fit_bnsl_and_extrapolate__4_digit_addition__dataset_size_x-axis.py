@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import scipy.optimize
 import time
 import math
-import matplotlib.pyplot as plt
 plt.style.use('seaborn-whitegrid')
 import numpy as np
 
