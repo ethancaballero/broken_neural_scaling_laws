@@ -1,7 +1,6 @@
 
 import matplotlib.pyplot as plt
 import scipy.optimize
-from scipy.optimize import curve_fit
 import time
 import math
 import matplotlib.pyplot as plt
@@ -67,7 +66,7 @@ if __name__ == '__main__':
     b = 1.25**b - .9
     d1 = 1.25**d1  - .9
     y_log = np.log(y1+1)
-    popt, _ = curve_fit(bnsl_with_1_break__log, x1, y_log, p0=[a, b, c0, c1, d1, f1], maxfev=100000000)
+    popt, _ = scipy.optimize.curve_fit(bnsl_with_1_break__log, x1, y_log, p0=[a, b, c0, c1, d1, f1], maxfev=100000000)
     a, b, c0, c1, d1, f1 = popt
     total_time = time.time() - start
     print("time: ", total_time)
