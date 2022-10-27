@@ -15,19 +15,19 @@ def bnsl_with_1_break(_x, a, b, c0, c1, d1, f1):
     return y
 
 def bnsl_with_1_break__log(_x, a, b, c0, c1, d1, f1):
-    y = a + b * _x**(-c0) * (1 + (_x/d1)**(1/f1))**(-c1 * f1)
+    y = bnsl_with_1_break(_x, a, b, c0, c1, d1, f1)
     return np.log(y+1)
 
 def bnsl_with_1_break__msle_optim(p, _x, _y):
     a, b, c0, c1, d1, f1 = p
     b = 1.25**b - .9
     d1 = 1.25**d1  - .9
-    y = a + b * _x**(-c0) * (1 + (_x/d1)**(1/f1))**(-c1 * f1)
+    y = bnsl_with_1_break(_x, a, b, c0, c1, d1, f1)
     return np.mean((np.log(y+1)-np.log(_y+1))**2)
 
 def bnsl_with_1_break__sle(p, _x, _y):
     a, b, c0, c1, d1, f1 = p
-    y = a + b * _x**(-c0) * (1 + (_x/d1)**(1/f1))**(-c1 * f1)
+    y = bnsl_with_1_break(_x, a, b, c0, c1, d1, f1)
     return (np.log(y)-np.log(_y))**2
 
 
