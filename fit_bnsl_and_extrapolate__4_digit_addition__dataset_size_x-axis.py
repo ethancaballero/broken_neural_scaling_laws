@@ -59,12 +59,10 @@ if __name__ == '__main__':
     plt.plot(x2, y2, 'o', color=[0.0, 0.925, 0.0])
     plt.plot(x1, y1, 'o', color='black')
 
-    params = (x1, y1)
-
     p_grid = (slice(0.0, 1., .1), slice(0, 40, 2.5), slice(0, 1, 0.25), slice(0, 1, 0.25), slice(0, 40, 2.5), slice(0, 1, 0.25))
 
     start = time.time()
-    res = scipy.optimize.brute(bnsl_with_1_break__msle_optim, p_grid, args=params, full_output=False, finish=None, workers=-1)
+    res = scipy.optimize.brute(bnsl_with_1_break__msle_optim, p_grid, args=(x1, y1), full_output=False, finish=None, workers=-1)
     a, b, c0, c1, d1, f1 = res
     b = 1.25**b - .9
     d1 = 1.25**d1  - .9
