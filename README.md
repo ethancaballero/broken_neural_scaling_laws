@@ -1,4 +1,4 @@
-# Code Release for "Broken Neural Scaling Laws" paper
+# Code Release for "Broken Neural Scaling Laws" (BNSL) paper
 
 To reproduce the Fitting and Extrapolation of BNSL on 4 Digit Addition from Figure 4 Left, run 
 
