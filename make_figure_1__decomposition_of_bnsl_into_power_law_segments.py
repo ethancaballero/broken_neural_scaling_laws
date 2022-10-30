@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 x_min = -1
-x_max = 27
+x_max = 26
 x = np.logspace(x_min, x_max, 8192)
 
 # unimprovable performance
