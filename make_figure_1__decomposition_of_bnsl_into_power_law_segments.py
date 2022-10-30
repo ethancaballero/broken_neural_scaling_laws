@@ -82,3 +82,7 @@ plt.legend(loc='lower left')
 
 plt.savefig('figure_1.png', bbox_inches='tight')
 plt.show()
+
+plt.close()
+plt.cla()
+plt.clf()
