@@ -5,11 +5,11 @@ x_min = -1
 x_max = 27
 x = np.logspace(x_min, x_max, 8192)
 
-# offset (on log-log plot)
-b = 4.66e3
-
 # unimprovable performance
 a = 1e-3
+
+# offset (on log-log plot)
+b = 4.66e3
 
 #changes in slope (on log-log plot)
 c0 = 0.05
