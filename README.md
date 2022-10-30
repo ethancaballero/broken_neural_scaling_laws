@@ -9,5 +9,5 @@ To reproduce the Fitting and Extrapolation of BNSL on 4 Digit Addition from Figu
 
 To reproduce the Decomposition of BNSL into Power Law Segments from Figure 1, run 
 
-```python make_figure_1__decomposition_of_bnsl_into_power_laws.py```
+```python make_figure_1__decomposition_of_bnsl_into_power_law_segments.py ```
 
