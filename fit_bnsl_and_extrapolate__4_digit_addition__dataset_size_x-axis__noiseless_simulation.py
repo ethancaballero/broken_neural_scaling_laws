@@ -7,7 +7,7 @@ plt.style.use('seaborn-whitegrid')
 import numpy as np
 
 """
-Code to reproduce Figure 4 Left of arxiv.org/abs/2210.14891
+Code to reproduce Figure 4 Right of arxiv.org/abs/2210.14891
 """
 
 def bnsl_with_1_break(_x, a, b, c0, c1, d1, f1):
