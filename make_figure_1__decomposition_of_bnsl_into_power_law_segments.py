@@ -43,7 +43,7 @@ x2 = x[(x >= d1*.04) & (x <= d2*25)]
 x3 = x[(x >= d2*.04) & (x <= d3*25)]
 x4 = x[(x >= d3*.32)]
 
-#individual power law segements within the bnsl
+#individual power law segments within the bnsl
 segment1 =      b * (x1)**(-c0)
 segment2 =      b * (d1)**(-(c0)) * (x2/d1)**(-(c1+c0))
 segment3 =      b * (d1)**(-(c0)) * (d2/d1)**(-(c1+c0)) * (x3/d2)**(-(c2+c1+c0))
