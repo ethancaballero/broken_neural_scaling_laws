@@ -45,10 +45,10 @@ x4 = x[(x >= d3*.32)]
 
 #individual power law segments within the bnsl; this decomposition is usable when values of f are not too large
 segment1 =      b * (x1)**(-c0)
-segment2 =      b * (d1)**(-(c0)) * (x2/d1)**(-(c1+c0))
-segment3 =      b * (d1)**(-(c0)) * (d2/d1)**(-(c1+c0)) * (x3/d2)**(-(c2+c1+c0))
-segment4 =      b * (d1)**(-(c0)) * (d2/d1)**(-(c1+c0)) * (d3/d2)**(-(c2+c1+c0)) * (x4/d3)**(-(c3+c2+c1+c0))
-#segment4 = a + b * (d1)**(-(c0)) * (d2/d1)**(-(c1+c0)) * (d3/d2)**(-(c2+c1+c0)) * (x4/d3)**(-(c3+c2+c1+c0))
+segment2 =      b * (d1)**(-c0) * (x2/d1)**(-(c1+c0))
+segment3 =      b * (d1)**(-c0) * (d2/d1)**(-(c1+c0)) * (x3/d2)**(-(c2+c1+c0))
+segment4 =      b * (d1)**(-c0) * (d2/d1)**(-(c1+c0)) * (d3/d2)**(-(c2+c1+c0)) * (x4/d3)**(-(c3+c2+c1+c0))
+#segment4 = a + b * (d1)**(-c0) * (d2/d1)**(-(c1+c0)) * (d3/d2)**(-(c2+c1+c0)) * (x4/d3)**(-(c3+c2+c1+c0))
 linewidth = 2.0
 
 plt.figure(figsize=(6.4, 4))
