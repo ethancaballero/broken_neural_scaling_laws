@@ -20,8 +20,8 @@ def bnsl_with_1_break__log(_x, a, b, c0, c1, d1, f1):
 
 def bnsl_with_1_break__msle_optim(p, _x, _y):
     a, b, c0, c1, d1, f1 = p
-    b = 1.25**b - .9
-    d1 = 1.25**d1  - .9
+    b = 1.25**b - 1 + 1e-8
+    d1 = 1.25**d1 - 1 + 1e-8
     y = bnsl_with_1_break(_x, a, b, c0, c1, d1, f1)
     return np.mean((np.log(y+1)-np.log(_y+1))**2)
 
@@ -62,8 +62,8 @@ if __name__ == '__main__':
     start = time.time()
     res = scipy.optimize.brute(bnsl_with_1_break__msle_optim, p_grid, args=(x1, y1), full_output=False, finish=None, workers=-1)
     a, b, c0, c1, d1, f1 = res
-    b = 1.25**b - .9
-    d1 = 1.25**d1  - .9
+    b = 1.25**b - 1 + 1e-8
+    d1 = 1.25**d1 - 1 + 1e-8
     y_log = np.log(y1+1)
     popt, _ = scipy.optimize.curve_fit(bnsl_with_1_break__log, x1, y_log, p0=[a, b, c0, c1, d1, f1], maxfev=100000000)
     a, b, c0, c1, d1, f1 = popt
