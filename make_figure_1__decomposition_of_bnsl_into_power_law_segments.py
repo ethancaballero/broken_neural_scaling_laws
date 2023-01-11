@@ -25,7 +25,6 @@ d3 = 2e20
 # sharpness of transitions during breaks; smaller (nonnegative) values are sharper; larger values are less sharp
 f1 = 1.1
 f2 = 1.425
-f3 = .3
 f3 = 0.05
 
 """
